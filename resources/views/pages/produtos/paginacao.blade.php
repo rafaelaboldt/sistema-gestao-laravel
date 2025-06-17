@@ -6,7 +6,7 @@
         <h1 class="h2">Produtos</h1>
     </div>
     <div>
-        <form action="" method="get">
+        <form action="{{ route('produto.index') }}" method="get">
             <input type="text" name="pesquisar" placeholder="Digite o nome">
             <button> Pesquisar </button>
             <a href="" type="button" class="btn btn-success float-end">Incluir Produto</a>
@@ -30,7 +30,7 @@
                                 <td>{{ 'R$' . ' ' . number_format($produto->valor, 2, ',', '.') }}</td>
                                 <td>
                                     <a href="" class="btn btn-light btn-sm">Editar</a>
-                                    <a href="" class="btn btn-danger btn-sm">Excluir</a>
+                                    <a href="{{ route('produto.delete') }}" class="btn btn-danger btn-sm">Excluir</a>
                                 </td>
                             </tr>
                         @endforeach
