@@ -21,8 +21,12 @@ function deleteRegistroPaginacao(rotaUrl, idDoRegistro) {
                 alert('Não foi possivel excluir')
             }
         }).fail(function (data) {
-            $unblockUI();
+            $.unblockUI();
             alert('Não foi possivel buscar os dados');
         });
     }
 }
+
+$(document).ready(function() {
+    $('#mascara_valor').mask('#.##0,00', { reverse: true });
+});

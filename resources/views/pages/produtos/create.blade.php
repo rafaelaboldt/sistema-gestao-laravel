@@ -19,7 +19,7 @@
 
         <div class="mb-3">
             <label class="form-label">Valor</label>
-            <input type="number" step="0.01" class="form-control @error('valor') is-invalid @enderror" name="valor" value="{{ old('valor') }}">
+            <input id="mascara_valor" type="text" class="form-control @error('valor') is-invalid @enderror" name="valor" value="{{ old('valor') }}">
             @error('valor')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
