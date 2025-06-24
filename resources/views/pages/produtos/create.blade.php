@@ -11,7 +11,7 @@
 
         <div class="mb-3">
             <label class="form-label">Nome</label>
-            <input type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}">
+            <input type="text" value="{{ old('nome') }}" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}">
             @error('nome')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -19,7 +19,7 @@
 
         <div class="mb-3">
             <label class="form-label">Valor</label>
-            <input id="mascara_valor" type="text" class="form-control @error('valor') is-invalid @enderror" name="valor" value="{{ old('valor') }}">
+            <input id="mascara_valor" value="{{ old('valor') }}" type="text" class="form-control @error('valor') is-invalid @enderror" name="valor" value="{{ old('valor') }}">
             @error('valor')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
