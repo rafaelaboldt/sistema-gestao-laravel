@@ -1,0 +1,41 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.env.*
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.vscode
+/.idea
+.DS_Store
+
+# Ignora arquivos de testes locais
+/tests/_output/
+/tests/.phpunit.cache/
+
+# Ignora arquivos de build de frontend (caso use Vite ou Mix)
+public/hot
+public/build
+resources/js/.vite
+resources/js/.vite-inspect
+
+# Ignora arquivos temporários do sistema
+*.log
+*.swp
+*.swo
+*.tmp
+
+# Ignora arquivos do Laravel Telescope e Horizon (se você usa)
+storage/debugbar
+storage/logs
+storage/framework/cache
+storage/framework/sessions
+storage/framework/views
+
+# Ignora arquivos de cache do Laravel
+bootstrap/cache/*.php
