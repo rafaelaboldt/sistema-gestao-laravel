@@ -43,6 +43,16 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            
+            'stream' => [
+                'ssl' => [
+                    'verify_peer' => true,
+                    'verify_peer_name' => true,
+                    'allow_self_signed' => false,
+                    'cafile' => env('MAIL_CAFILE', '/etc/ssl/certs/ca-certificates.crt'),
+                ],
+            ],
+
         ],
 
         'ses' => [

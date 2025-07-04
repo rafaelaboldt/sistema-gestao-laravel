@@ -12,8 +12,8 @@ class ClientesSeeder extends Seeder
     {
         Cliente::create(
             [
-                'nome' => 'Nicole Maron',
-                'email' => 'nicole@gmail.com',
+                'nome' => 'Cliente Exemplo 1',
+                'email' => 'cliente@gmail.com',
                 'endereco' => 'rua x',
                 'logradouro' => 'rua x',
                 'cep' => '217900',
@@ -23,8 +23,8 @@ class ClientesSeeder extends Seeder
 
         Cliente::create(
             [
-                'nome' => 'Gabriela Boldt',
-                'email' => 'ggabiboldt@gmail.com',
+                'nome' => 'Cliente Exemplo 2',
+                'email' => 'clienteexemplo@gmail.com',
                 'endereco' => 'rua x',
                 'logradouro' => 'rua x',
                 'cep' => '217900',

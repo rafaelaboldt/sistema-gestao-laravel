@@ -115,30 +115,29 @@ php artisan migrate --seed
 
 ---
 
-## Configuração de envio de e-mails
+## Configuração de envio de e-mails (desenvolvimento)
 
-O sistema utiliza o serviço de envio de e-mails via SMTP. No arquivo **.env**, configure as seguintes variáveis:
+O sistema está configurado para utilizar o MailHog como servidor de e-mail local. Com o MailHog, todos os e-mails enviados pela aplicação são capturados e podem ser visualizados no navegador, sem enviar mensagens reais.
+
+No seu arquivo .env, mantenha a seguinte configuração:
 
 ```
 MAIL_MAILER=smtp
-MAIL_HOST=smtp.seudominio.com
-MAIL_PORT=587
-MAIL_USERNAME=seuemail@seudominio.com
-MAIL_PASSWORD=sua_senha_ou_senha_de_aplicativo
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=seuemail@seudominio.com
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=example@example.com
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
+Após subir os containers com Docker, acesse a interface do MailHog:
+http://localhost:8025/
+
 ###  Importante:
 
-Se estiver usando Gmail, Outlook, Yahoo ou outro provedor com autenticação em duas etapas:
-
-- NÃO use sua senha normal.
-
-- Crie uma senha de app (senha específica para aplicativos) para inserir no campo MAIL_PASSWORD.
-
-Se você não usar a senha de app, provavelmente receberá erros como `535 Authentication failed` ou `SMTP connect() failed`.
+Esta configuração é apenas para uso local durante o desenvolvimento. Para produção, será necessário configurar um serviço de e-mail real (SMTP), ajustando as variáveis do arquivo `.env`.
 
 ---
 

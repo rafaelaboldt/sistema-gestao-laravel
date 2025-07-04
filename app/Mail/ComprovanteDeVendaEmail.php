@@ -39,6 +39,7 @@ class ComprovanteDeVendaEmail extends Mailable
     {
         return new Content(
             view: 'email.comprovante_venda',
+            with: ['mailData' => $this->mailData],
         );
     }
 
